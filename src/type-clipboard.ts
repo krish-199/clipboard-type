@@ -5,7 +5,6 @@ import { promisify } from "node:util";
 const execFileAsync = promisify(execFile);
 
 export default async function Command() {
-
   const latestClipboardItem = await Clipboard.readText();
 
   // If clipboard is empty show Toast and return
@@ -29,7 +28,6 @@ export default async function Command() {
     await showCustomToast(`Failed to type clipboard content ${message}`, Toast.Style.Failure);
   }
   await showCustomToast("Clipboard typed out", Toast.Style.Success);
-
 }
 
 async function showCustomToast(message: string, type: Toast.Style): Promise<void> {
