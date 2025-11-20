@@ -24,7 +24,7 @@ export default async function Command() {
   // Split by newlines and tabs to handle them with specific key codes
   const parts = latestClipboardItem.split(/(\r\n|\r|\n|\t)/);
   const { delay: delayStr } = getPreferenceValues<Preferences>();
-  const delay = parseFloat(delayStr) || 0.02; // Delay between keystrokes in seconds
+  const delay = parseFloat(delayStr) || 0.002; // Delay between keystrokes in seconds
 
   const keystrokeCommands = parts
     .map((part) => {

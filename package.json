@@ -28,8 +28,8 @@
       "type": "textfield",
       "required": false,
       "title": "Typing Delay",
-      "description": "Delay between keystrokes in seconds (default: 0.02)",
-      "default": "0.02"
+      "description": "Delay between keystrokes in seconds (default: 0.002)",
+      "default": "0.002"
     }
   ],
   "dependencies": {
