@@ -31,7 +31,7 @@ export default async function Command() {
       if (part === "\t") return `key code 48\n delay ${delay}`;
       if (/^(\r\n|\r|\n)$/.test(part)) return `key code 36\n delay ${delay}`;
       if (part === "") return null;
-      return `repeat with char in characters of "${escapeForAppleScript(part)}"\n keystroke char\n delay ${delay}\n end repeat`;
+      return `repeat with char in characters of "${escapeForAppleScript(part)}"\n keystroke (char as text)\n delay ${delay}\n end repeat`;
     })
     .filter((cmd) => cmd !== null)
     .join("\n ");
