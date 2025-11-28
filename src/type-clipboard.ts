@@ -4,7 +4,6 @@ import { promisify } from "node:util";
 
 const execFileAsync = promisify(execFile);
 
-
 export default async function Command() {
   const latestClipboardItem = await Clipboard.readText();
 
